@@ -15,7 +15,7 @@ def execute_test(match_name, match_major):
     major = raw_input('Please enter your major: ')
 
     weenie_status = bool(re.match(match_name, name.lower()) or \
-            re.match(match_major, major.lower()))
+            bool(re.match(match_major, major.lower())))
 
     for i in range(0, 3):
         time.sleep(1)
